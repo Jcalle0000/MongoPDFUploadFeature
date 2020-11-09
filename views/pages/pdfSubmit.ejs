@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <title>Add an event form</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li><a href="/">Main Page</a></li>
+                <!-- <li><a href="/scholarhips">Add a PDF file for scholarships</a></li>                 -->
+                <!-- <li><a href="/members">Add PDF file for Members</a></li> -->
+                <li><a href="/api/pdfs">Upcoming Events</a></li> 
+                <b><li><a href="/api/pdfs/new">Add an event</a></li></b>
+            </ul>
+        </div>
+
+
+        <br>
+        <h1>Add a PDF for an event (Currently Testing) </h1>
+    </header>
+    
+
+    <div class="MainStuff">
+
+        
+        <!-- Files/PDF for events -->
+        <!-- we post to api/pdfs through out router.post('api/pdfs') returning the date here -->
+
+        <div class="Form1">
+
+            <!-- Sending data to upcoming events -->
+                                <!-- enctype="multipart/form-data" -->
+            <form method="post" action="/" >
+
+                <div class="evN">                
+                    <label>Event Name: </label>  
+                        <input type="text" name="eventName" value=""> <br>
+                        <!-- value = Event.eventName%> -->
+                </div>
+
+                <div>
+                    <label>Category:</label> 
+                    <input type="text" name="category" value="  "> <br>
+                </div>
+            
+                <div>
+                        <!-- Date of event -->
+                    <label>Date: </label>
+                        <input type ="date" name="date" value= " " > <br>
+                </div>
+
+                <div>
+                    <label>Points Value: </label> 
+                        <input type="number" name="pointsValue" min="1" value="1"> <br>
+                </div>
+                
+                <div>
+                    <label>Description: </label> 
+                        <input type="text" name="description" value=" "> <br>
+                </div>
+
+                <div>
+                    <!-- Optional -->
+                    <label>Speakers: </label> 
+                    <input type="text" name="speakers" value="optional"> <br> <br>
+                </div>
+
+                <div>
+                    <label>Flyer: </label> 
+                        <input type="file" name="Flyer" > <br> <br>
+                </div>
+
+                <!-- Button as we are uploading content -->
+                <div class="uploadbutton">
+                    <button type="submit">Create Event</button> 
+                </div>
+                
+            </form>
+        </div>
+       
+    </div>
+    
+
+  
+   
+
+    
+</body>
+</html>
